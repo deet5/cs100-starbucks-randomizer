@@ -74,6 +74,18 @@ test/RefresherTest.cpp
 test/testCoffees.cpp
 test/refreshFlavorTest.cpp
 test/coffeeSyrupTest.cpp
+test/hotChocolateTest.cpp
+test/americanoTest.cpp
+test/expressoTest.cpp
+test/generatorTest.cpp
+test/latteTest.cpp
+test/nonCaffAndCafGenTest.cpp
+test/randomizerTest.cpp
+test/refreshFlavorTest.cpp
+test/testCaffGen.cpp
+test/testCremeFrapFlavor.cpp
+test/testEspresso.cpp
+test/testNonCaffGen.cpp
 )
 add_executable(test ${TEST_FILES} ${SOURCE_FILES})
 
