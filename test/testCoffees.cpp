@@ -1,9 +1,6 @@
 #include "gtest/gtest.h"
 #include "../lib/Coffee.h"
 #include "../lib/Drink.h"
-#include "../lib/Americano.h"
-#include "../lib/Espresso.h"
-#include "../lib/Latte.h"
 
 TEST(AmericanoConstructorTest, Atest3)
 {
