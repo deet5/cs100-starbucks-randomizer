@@ -48,6 +48,7 @@ src/Refresher.cpp
 src/CremeFrappuccino.cpp
 src/HotChocolate.cpp
 src/CoffeeSyrup.cpp
+
 src/ChaiTea.cpp
 src/Americano.cpp
 src/Coffee.cpp
@@ -59,12 +60,18 @@ src/CaffGenerator.cpp
 src/Randomizer.cpp
 src/NonCaffGenerator.cpp
 src/NonCafAndCaf.cpp
+
 )
 add_executable(starbucks_sampler main.cpp ${SOURCE_FILES})
 
 set(TEST_FILES 
 test/userTest.cpp
 test/weatherTest.cpp
+test/DrinkTest.cpp
+test/chaiTest.cpp
+test/CremeFrapTest.cpp
+test/RefresherTest.cpp
+test/testCoffees.cpp
 )
 add_executable(test ${TEST_FILES} ${SOURCE_FILES})
 

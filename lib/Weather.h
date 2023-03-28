@@ -14,6 +14,7 @@ private:
 public:
     Weather(int userPos);
     Weather();
+   
     void getWeatherTypes();
     void setCurrentWeather(int VectorPosition);
     string getCurrentWeather();

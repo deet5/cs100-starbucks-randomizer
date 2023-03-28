@@ -13,6 +13,9 @@ private:
 
 public:
     Randomizer(Weather *currentWeather, int theUserAge, int UserChoiceDrink);
+    int getAge();
+    int getuserChoiceDrink();
+    int getCurrWeather();
     std::string getRandomDrink();
 };
 #endif

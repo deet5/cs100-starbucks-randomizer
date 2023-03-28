@@ -9,8 +9,10 @@ class Coffee : public Drink
 protected:
     int numEspressoShots;
 
+
 public:
     Coffee();
     std::string getNumberEspresso();
+
 };
 #endif

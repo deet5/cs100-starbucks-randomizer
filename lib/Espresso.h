@@ -5,9 +5,11 @@
 #include "Coffee.h"
 
 class Espresso : public Coffee
+
 {
 public:
     Espresso(int numEspressoShots);
     std::string getName();
 };
+
 #endif

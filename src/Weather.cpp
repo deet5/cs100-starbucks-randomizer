@@ -36,3 +36,4 @@ int Weather::getCurrentPos()
 {
     return currentWeather;
 }
+

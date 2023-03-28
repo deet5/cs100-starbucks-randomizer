@@ -19,7 +19,18 @@ Randomizer::Randomizer(Weather *currentWeather, int theUserAge, int UserChoiceDr
     age = theUserAge;
     choiceDrink = UserChoiceDrink;
 }
-
+int Randomizer::getAge()
+{
+    return age;
+}
+int Randomizer::getuserChoiceDrink()
+{
+    return choiceDrink;
+}
+int Randomizer::getCurrWeather()
+{
+    return weather->getCurrentPos();
+}
 string Randomizer::getRandomDrink()
 {
     vector<string> drinkList = {};                               // creating an empty drink list. this is the final list which will be picked from to get the drink for the user!
