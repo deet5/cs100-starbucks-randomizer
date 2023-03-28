@@ -74,6 +74,7 @@ test/RefresherTest.cpp
 test/testCoffees.cpp
 test/refreshFlavorTest.cpp
 test/coffeeSyrupTest.cpp
+
 )
 add_executable(test ${TEST_FILES} ${SOURCE_FILES})
 
