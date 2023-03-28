@@ -1,27 +1,12 @@
-#include "../header/CremeFrappuccino.h"
+#include "../lib/CremeFrappuccino.h"
 #include <string>
 
-CremeFrappuccino::CremeFrappuccino(bool isWhipped)
+CremeFrappuccino::CremeFrappuccino()
 {
-    whippedCream = isWhipped;
-}
-
-std::string CremeFrappuccino::getSyrup(int pos)
-{
-    int arrLength = sizeof(arr) / sizeof(std::string);
-    if (pos > arrLength)
-    {
-        return "No such position in the Syrup array!";
-    }
-    return syrup[pos];
+    isHot = false;
 }
 
 std::string CremeFrappuccino::getName()
 {
-    return isName;
-}
-
-bool CremeFrappuccino::getWhipped()
-{
-    return whippedCream;
+    return "Crème Frappuccino";
 }

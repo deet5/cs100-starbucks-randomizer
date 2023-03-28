@@ -1,17 +1,7 @@
-#include "../header/HotChocolate.h"
+#include "../lib/HotChocolate.h"
 #include <string>
 
-HotChocolate::HotChocolate(bool isWhipped)
+std::string HotChocolate::getName()
 {
-    whippedCream = isWhipped;
-}
-
-std::string getName()
-{
-    return isName;
-}
-
-bool getWhipped()
-{
-    return whippedCream;
+    return "Hot Chocolate";
 }

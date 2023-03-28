@@ -1,4 +1,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9878934&assignment_repo_type=AssignmentRepo)
+
+[![CI](https://github.com/cs100/final-project-escapeteers/actions/workflows/main.yml/badge.svg)](https://github.com/cs100/final-project-escapeteers/actions/workflows/main.yml)
+
 # Starbucks Sampler
 
 Authors: <br>
@@ -25,40 +28,36 @@ One feature we would have is the option to select allergies or dietary restricti
  
 ![alt text](/images/readme/UML.png)
 
-The program starts with asking the user their name and current weather outside, (we may add asking the user for their allergies or milk intolerances but we do not have that implemented yet). After that based on the weather outside, (if it is hot, they will be recommended a cold drink, and vice versa) the program would randomly generate a drink for them. The classes we have currently are subcategories of the final drink product. They fall under, caffeinated and non caffeinated. We made sure to include setter and getter methods in order to pull the drink names and customizations to display to the user after the choice is generated. Under caffeinated drinks, we split the group into tea and coffee. Tea leads to either cold or hot chai and only that as of right now, but we may add to this to include other teas. In coffee, which can all be hot or cold, we have lattes and or macchiatos (which are unmixed lattes), which include a certain type of milk, syrup, toppings, and a certain number of espresso shots. Espressos are just plain coffee as are americanos which are just diluted with more water. Turning into the non caffeinated group, we branch into frappes, which come in different flavors and the choice of whipped cream/toppings, and refreshers/lemonades which come in different flavors; both are cold. The hot option is hot chocolate, which only comes with the options of whipped cream and or toppings. We plan on storing our different choices for milk, syrups, flavors, and toppings in arrays for random generation. 
+The User class has two private attributes, name and age, and a constructor to create a new User instance with these values. The Drink class has one private attribute, temperature, and a getName() method that returns the name of the drink. The syrup and flavor classes are decorators for the Drink class, and they inherit from the Drink class. They each have a constructor that takes a Drink instance and a getName() method that returns the name of the decorated drink. The Hot Chocolate, Chai Tea, and Creme Frappuccino and other classes are derived from the Drink class, and they each have a getName() method that returns the name of the drink. The Generator class has three derived classes that generate different lists of drinks. These classes populate a vector in Randomizer class, which returns a randomly generated name of the drink based on the user's age, the current weather, and/or user preference.
 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+Each class in the diagram has only one responsibility following Single Responsibility Principle. In the given program, we can ensure OCP by using decorators for the Syrup and Flavor classes. Instead of modifying the Drink class every time we want to add a new flavor or syrup, we can create new classes that inherit from the Drink class and add the new behavior as a decorator. This will ensure that the Drink class remains closed for modification, but open for extension, securing Open-Closed principle. To preserve the Liskov Substitution principle the derived classes (Hot Chocolate, Chai Tea, Creme Frappuccino and others) behave like their base class (Drink). We can ensure this by making sure that each derived class implements the same interface as the base class and that they behave in a way that is consistent with the base class. 
 
+These changes helped us to write better code because they are breaking up our tasks and allowing us to focus on one importance at a time. With SRP, single responsibilty principle, focusing on one thing at a time makes code easier to break down and understand as well as debug. OCP states just to add and not modify older code to make tracing easier. LSP states any function or method that works with a base type should work with all of its subtypes without causing errors. This principle makes it easier to reason about code since developers can rely on the behavior of the base type and its subtypes without worrying about unexpected behavior. ISP makes code modular, making it more specific, and should not be forced to be depednent on useless imterfaces. Basically making all code useful and important, makes none of it unhelpful. DIP states that high-level modules should not depend on low-level modules. Instead, both should depend on abstractions, which reduces coupling and makes code more flexible and easier to test.
+
+## Screenshots
+
+<img src="/images/readme/sample1.png" width="500" />
+<img src="/images/readme/sample2.png" width="500" />
+<img src="/images/readme/sample3.png" width="500" />
+
+## Installation/Usage
  
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
- ## Screenshots
- > Screenshots of the input/output after running your application
- ## Installation/Usage
- > Instructions on installing and running your application
+ This is a simple command line program. 
+ 1. Download the code to your local machine from the repository.
+ 2. Open the terminal and use `cd` command to move to the folder containing the program.
+ 3. Run the following comands in the terminal:
+```
+cmake .
+make
+```
+```
+./bin/starbucks_sampler
+```
+4. The program should run. You can answer the prompts to get a random drink. 
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+
+We used Googletest to test the functionality of the program. CI is implemented using GitHub Actions and the badge is present at the top of this file. We also ran Valgrind for memory leaks (see the screenshot below).
+
+<img src="/images/readme/valgrind.png" width="500" />
  
